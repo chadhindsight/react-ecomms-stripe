@@ -1,7 +1,7 @@
 
 function Success() {
     return (
-        <h1>Ass!</h1>
+        <h1>Welcome to our store</h1>
     )
 }
 
