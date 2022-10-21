@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { productsArray, getProductData } from "./productsStore";
 
-// NB: Context is just saying that the following fuctions should exist, but we are not defining the related logic in here 
+// NB: Context is just saying that the following fuctions should exist, but we are not defining the related logic in here.
 export const CartContext = createContext({
     items: [],
     getProductQuantity: () => { },
