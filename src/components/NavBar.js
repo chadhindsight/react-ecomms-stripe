@@ -10,7 +10,7 @@ function NavBarComponent() {
     const handleShow = () => setShow(true);
 
     // A var that keeps track of how many items are in a user's cart
-    const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0)
+    const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
     return (
         <>
