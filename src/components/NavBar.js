@@ -10,6 +10,22 @@ function NavBarComponent() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const checkout = async () => {
+        await fetch('http://localhost:4000/checkout', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ items: cart.items })
+        }).then((response) => {
+            return response.json();
+        }).then((response) => {
+            if (response.url) {
+                window.location.assign(response.url); // Forwarding user to Stripe
+            }
+        });
+    }
+
     // A var that keeps track of how many items are in a user's cart
     const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
@@ -36,8 +52,8 @@ function NavBarComponent() {
 
                             <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
 
-                            <Button variant="success" >
-                                Purchase items!
+                            <Button variant="success" onClick={checkout}>
+                                Purchase items
                             </Button>
                         </>
                         :
