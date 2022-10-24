@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { productsArray, getProductData } from "./productsStore";
+import { getProductData } from "./productsStore";
 
 // NB: Context is just saying that the following fuctions should exist, but we are not defining the related logic in here
 export const CartContext = createContext({
@@ -55,7 +55,7 @@ export function CartProvider({ children }) {
     function removeOneFromCart(id) {
         const quantity = getProductQuantity(id);
 
-        if (quantity == 1) {
+        if (quantity === 1) {
             deleteFromCart(id);
         } else {
             setCartProducts(
