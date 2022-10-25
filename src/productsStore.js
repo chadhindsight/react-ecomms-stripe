@@ -2,7 +2,7 @@
 // Sunglasses: price_1LnUTxDM1jwCEz8OAqHYTwKQ
 // Camera: price_1LnUUoDM1jwCEz8OvxIcJ7to
 
-// the ids corresponds to the price ids on stripe
+// the ids corresponds to the price ids on stripe.
 const productsArray = [
     {
         id: "price_1LwWeqGimAM5IWJjrUNqjrrB",
