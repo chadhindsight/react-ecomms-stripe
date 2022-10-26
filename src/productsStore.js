@@ -17,7 +17,7 @@ const productsArray = [
         price: 39.99
     }
 ];
-
+// Return a specific product
 function getProductData(id) {
     let productData = productsArray.find(product => product.id === id);
 
