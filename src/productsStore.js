@@ -1,6 +1,3 @@
-// Coffee: price_1LnUTFDM1jwCEz8OGoOSXiSM
-// Sunglasses: price_1LnUTxDM1jwCEz8OAqHYTwKQ
-// Camera: price_1LnUUoDM1jwCEz8OvxIcJ7to
 
 // the ids corresponds to the price ids on the stripe dashboard
 const productsArray = [
